@@ -18,7 +18,7 @@
             </svg>
           </button>
         </div>
-        <nav class="hidden md:flex space-x-10">
+        <nav class="hidden md:flex space-x-10 main-menu">
 
           <nuxt-link v-for="(item,i) in mainMenu" :key="i" :to="item.link" class="text-base font-medium text-gray-500 hover:text-gray-900">
             {{item.name}}
@@ -26,7 +26,7 @@
         </nav>
 
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-          <nuxt-link to="#" class="border-2 border-green-500 rounded-md px-4 py-2 text-base font-medium text-gray-500 hover:bg-green-500 hover:text-white transition duration-300">
+          <nuxt-link to="#" class="border-2 border-green-500 rounded-md px-4 py-2 text-base font-medium text-green-500 hover:bg-green-500 hover:text-white transition duration-300">
             Get Quote
           </nuxt-link>
           <nuxt-link to="/contact" class="ml-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-400 hover:bg-blue-500 transition duration-300">
@@ -79,6 +79,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
 
 </style>

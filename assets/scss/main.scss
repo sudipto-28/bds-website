@@ -1,0 +1,9 @@
+.main-menu {
+  .nuxt-link-exact-active {
+    @apply text-green-500
+  }
+}
+
+.flickity-button {
+  @apply hidden md:block
+}
