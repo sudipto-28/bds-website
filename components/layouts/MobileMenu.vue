@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute top-0 inset-x-0 transition transform origin-top-right hidden">
+  <div class="absolute top-0 inset-x-0 transition transform origin-top-right transition duration-300 md:hidden" :class="{'translate-x-full': menuOpen}">
     <div class="rounded-lg h-screen shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
       <div class="pt-5 pb-6 h-full px-5 flex flex-col">
         <div class="flex items-center justify-between">
@@ -7,7 +7,7 @@
             <img class="w-auto h-14" src="/images/bds-logo.png" alt="Workflow">
           </div>
           <div class="-mr-2">
-            <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click.prevent="$emit('closeMenu')">
               <span class="sr-only">Close menu</span>
               <!-- Heroicon name: outline/x -->
               <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -87,6 +87,12 @@ export default {
     menuOpen: {
       type: Boolean,
       default: false
+    }
+  },
+
+  methods: {
+    closeMenu() {
+      this.$emit('closeMenu')
     }
   }
 }

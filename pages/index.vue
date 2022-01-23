@@ -1,6 +1,9 @@
 <template>
 <div class="home">
   <HomeSlider />
+  <HomeAbout />
+  <HomeServices />
+  <HomeTestimonialSlider />
   <!-- <h1>Hello World</h1> -->
   <!-- <button @click="test()">Button</button> -->
 </div>
@@ -8,9 +11,16 @@
 
 <script>
 import HomeSlider from '~/components/views/home/HomeSlider'
+import HomeAbout from '~/components/views/home/HomeAbout'
+import HomeServices from '~/components/views/home/HomeServices'
+import HomeTestimonialSlider from '~/components/views/home/HomeTestimonialSlider'
+
 export default {
   components: {
-    HomeSlider
+    HomeSlider,
+    HomeAbout,
+    HomeServices,
+    HomeTestimonialSlider
   },
 
   methods: {
@@ -23,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  height: 5000px;
+  // height: 5000px;
 }
 </style>
 

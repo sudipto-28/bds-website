@@ -10,7 +10,7 @@
           </nuxt-link>
         </div>
         <div class="-mr-2 -my-2 md:hidden" >
-          <button class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="openMenu">
+          <button class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggleMenu">
             <span class="sr-only">Open menu</span>
             <!-- Heroicon name: outline/menu -->
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -46,7 +46,7 @@
         From: "opacity-100 scale-100"
         To: "opacity-0 scale-95"
     -->
-    <MobileMenu :menu="mainMenu" :menuOpen="menuOpen" />
+    <MobileMenu :menu="mainMenu" :menuOpen="menuOpen" @closeMenu="toggleMenu" />
   </div>
 
 </template>
@@ -59,7 +59,7 @@ export default {
     MobileMenu
   },
   data: () => ({
-    menuOpen: false,
+    menuOpen: true,
     mainMenu: [
       {name: 'About', link: '/about', icon: ''},
       {name: 'Contact', link: '/contact', icon: ''},
@@ -69,13 +69,15 @@ export default {
   }),
 
   methods: {
-    openMenu() {
+    toggleMenu() {
       console.log('Working')
+      this.menuOpen = !this.menuOpen
+      console.log('this.menuOpen', this.menuOpen)
     }
   },
-  mounted() {
-    this.openMenu()
-  }
+  // mounted() {
+  //   this.openMenu()
+  // }
 }
 </script>
 

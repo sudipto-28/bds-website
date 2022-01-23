@@ -1,6 +1,6 @@
 <template>
-  <div class="main">
-    <div class="header sticky z-50 top-0">
+  <div class="main overflow-hidden">
+    <div class="header fixed w-full z-50 top-0">
       <div class="header__main">
         <MainHeader />
       </div>
