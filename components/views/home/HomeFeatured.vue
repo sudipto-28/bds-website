@@ -4,7 +4,7 @@
       Featured Product
     </h1>
     <div class="mt-3 md:mt5">
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <ProductCard v-for="i in 6" :key="i" />
       </div>
 

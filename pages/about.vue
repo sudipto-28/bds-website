@@ -1,10 +1,27 @@
 <template>
-  <h1>Abbout Us</h1>
+  <div class="about">
+    <div class="header-section">
+      <HeaderSection />
+      <AboutDescription />
+      <AboutFounder />
+      <AboutPhilosophy />
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
+import HeaderSection from '~/components/shared/HeaderSection'
+import AboutDescription from '~/components/views/about/AboutDescription'
+import AboutPhilosophy from '~/components/views/about/AboutPhilosophy'
+import AboutFounder from '~/components/views/about/AboutFounder'
 
+export default {
+  components: {
+    HeaderSection,
+    AboutDescription,
+    AboutPhilosophy,
+    AboutFounder
+  }
 }
 </script>
 
