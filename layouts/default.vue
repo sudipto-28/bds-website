@@ -6,6 +6,7 @@
         <MainHeader />
       </div>
     </div>
+
     <div class="content">
       <nuxt />
     </div>
