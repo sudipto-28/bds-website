@@ -2,12 +2,9 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div class="relative bg-white pt-8 lg:pt-20">
     <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-      <h2 class="text-base font-semibold tracking-wider text-indigo-600 uppercase">Deploy faster</h2>
+      <h2 class="text-base font-semibold tracking-wider text-indigo-600 uppercase">What we do</h2>
       <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-        Everything you need to deploy your app
-      </p>
-      <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-        Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.
+        Everything you need to know about our services
       </p>
       <div class="mt-12">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -22,9 +19,9 @@
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Push to Deploy</h3>
+                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Export Import</h3>
                 <p class="mt-5 text-base text-gray-500">
-                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                  Exporting is defined as the sale of products and services in foreign countries that are sourced or made in the home country.Importing refers to buying goods and services from foreign sources and bringing them back into the home country.
                 </p>
               </div>
             </div>
@@ -41,9 +38,9 @@
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">SSL Certificates</h3>
+                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Trading Services</h3>
                 <p class="mt-5 text-base text-gray-500">
-                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                  the transmission of Customer Orders concerning Financial Instruments and the execution of Orders on or outside of a Trading venue. Trading services may also include Requests for Quote, Price Quotation and the execution of Orders outside a Trading.
                 </p>
               </div>
             </div>
@@ -60,9 +57,9 @@
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Simple Queues</h3>
+                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">It Solutions</h3>
                 <p class="mt-5 text-base text-gray-500">
-                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                  An information technology (IT) solution is a set of related software programs and/or services that are sold as a single package. We provide it solution best quality in a certain amount of time for better user purpose and good quality.
                 </p>
               </div>
             </div>
@@ -79,9 +76,9 @@
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Advanced Security</h3>
+                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Consultation</h3>
                 <p class="mt-5 text-base text-gray-500">
-                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                  The act of exchanging information and opinions about something in order to reach a better understanding of it or to make a decision, or a meeting for this purpose
                 </p>
               </div>
             </div>
@@ -99,9 +96,9 @@
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Powerful API</h3>
+                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Trading Advice</h3>
                 <p class="mt-5 text-base text-gray-500">
-                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                  Trading advice is any recommendation or guidance that attempts to educate, inform, or guide an investor regarding a particular investment product or series of products.
                 </p>
               </div>
             </div>
@@ -118,9 +115,9 @@
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Database Backups</h3>
+                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Customer Support</h3>
                 <p class="mt-5 text-base text-gray-500">
-                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                  Customer support is having a moment. In a highly competitive, digital-first world, providing your customers with responsive, relevant support is more important than ever.
                 </p>
               </div>
             </div>

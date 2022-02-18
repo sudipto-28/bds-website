@@ -6,7 +6,7 @@
     <client-only>
       <Flickity ref="flickity" :options="flickityOptions">
         <!-- <div class="carousel-cell w-full h-screen/md bg-red-500">1</div> -->
-        <HomeTestimonial v-for="i in 5" :key="i" />
+        <HomeTestimonial v-for="(item,i) in sliderItems" :ctx="item" :key="i" />
 
       </Flickity>
     </client-only>
@@ -30,7 +30,24 @@ export default {
       prevNextButtons: true,
       pageDots: false,
       accessibility: false,
-    }
+    },
+
+    sliderItems: [
+      {
+        name: 'Shankar Sarkar',
+        companyName: 'Greestar',
+        position: 'CEO',
+        image: '/images/shankar.jpeg',
+        message: "Professional, responsive, and able to keep up with ever-changing demand and tight deadlines: That's how I would describe Jeramy and his team at The Lorem Ipsum Company. When it comes to content marketing, you'll definitely get the 5-star treatment from the Bds Corporation Company!"
+      },
+      {
+        name: 'Shanti Ranjan Sarkar',
+        companyName: 'Eco Bangla',
+        position: 'CEO',
+        image: '/images/shanti.jpeg',
+        message: "I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all."
+      },
+    ]
   })
 }
 </script>

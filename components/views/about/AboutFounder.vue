@@ -5,7 +5,7 @@
     </h1>
     <div class="mt-3 md:mt-10">
        <div class="grid grid-cols-1 gap-8 md:gap-16 md:grid-cols-3">
-         <img class="w-full object-cover shadow-lg" src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+         <img class="w-full h-4/6 object-cover shadow-lg" src="/images/ceo.jpeg" alt="">
          <div class="col-span-2">
           <p class="text-base mb-2 md:mb-3">
             Dipanker Sarker is an ambitious and optimistic business executive with over twenty years experience and proven abilities in MNCs operating in the Bangladesh market.
