@@ -4,15 +4,15 @@
     <div class="h-full">
       <div class="relative shadow-xl h-full flex items-center justify-center sm:overflow-hidden">
         <div class="absolute h-full inset-0">
-          <img class="h-full w-full object-cover" src="https://images.pexels.com/photos/262353/pexels-photo-262353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="People working on laptops">
+          <img class="h-full w-full object-cover object-top" :src="ctx.img" alt="People working on laptops">
           <div class="absolute inset-0 bg-green-200 mix-blend-multiply"></div>
         </div>
         <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
           <h1 class="text-center text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-6xl">
-            <span class="block text-indigo-200">Take control of your</span>
+            <span class="block text-indigo-500" :style="{textShadow: '0 2px 10px rgba(0,0,0,0.30)'}">{{ ctx.name }}</span>
           </h1>
           <p class="mt-5 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl md:mt-6">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+            {{ ctx.des }}
           </p>
           <div class="mt-5 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center md:mt-10">
             <div class="">
@@ -53,6 +53,7 @@
 import ButtonBordered from '~/components/shared/ButtonBordered'
 
 export default {
+  props: ['ctx'],
   components: {
     ButtonBordered
   }
