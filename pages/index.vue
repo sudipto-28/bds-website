@@ -22,6 +22,7 @@ import HomeFeatured from '~/components/views/home/HomeFeatured'
 import HomePartners from '~/components/views/home/HomePartners'
 import HomeBlog from '~/components/views/home/HomeBlog'
 
+
 export default {
   components: {
     HomeSlider,
