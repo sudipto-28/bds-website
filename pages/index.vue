@@ -5,7 +5,7 @@
   <HomeServices />
   <HomeFeatured />
   <HomeBlog />
-  <HomeTestimonialSlider />
+  <!-- <HomeTestimonialSlider /> -->
 
   <!-- <HomePartners /> -->
   <!-- <h1>Hello World</h1> -->
