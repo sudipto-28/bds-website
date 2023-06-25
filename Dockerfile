@@ -5,13 +5,13 @@ ENV NODE_VERSION 16.13.1
 RUN mkdir /app
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package*.json ./
 
-RUN yarn install
+RUN npm install
 
 COPY . .
 
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "run" "start"]

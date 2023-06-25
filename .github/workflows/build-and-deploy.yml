@@ -1,0 +1,83 @@
+
+name: BDS CORP CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-push:
+    name: Build and Push
+    runs-on: self-hosted
+    environment:
+      name: production
+
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v3
+
+      - name: Get branch name
+        id: branch-name
+        uses: tj-actions/branch-names@v6
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR Private
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push docker image to Amazon ECR
+        env:
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          REPOSITORY: ${{ secrets.ECR_REPOSITORY_FRONTEND }}
+          IMAGE_TAG: ${{ steps.branch-name.outputs.current_branch }}-${{ github.run_number }}
+        run: |
+          REGISTRY=$(echo $REGISTRY) IMAGE_TAG=$(echo $IMAGE_TAG) REPOSITORY=$(echo $REPOSITORY) docker-compose -f docker-compose.yml build
+          aws ecr batch-delete-image \
+          --repository-name $REPOSITORY \
+          --image-ids "$(aws ecr list-images --repository-name $REPOSITORY --query 'imageIds[*]' --output json
+          )" || true
+          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+  # pull-and-deploy:
+  #   name: Pull and Deploy
+  #   needs: build-and-push
+  #   runs-on: self-hosted
+  #   environment:
+  #     name: production
+
+  #   steps:
+  #     - name: Get branch name
+  #       id: branch-name
+  #       uses: tj-actions/branch-names@v6
+
+  #     - name: Pull and run container on Amazon EC2
+  #       uses: appleboy/ssh-action@master
+  #       env:
+  #         REGISTRY: ${{ secrets.ECR_REGISTRY }}
+  #         REPOSITORY: ${{ secrets.ECR_REPOSITORY_FRONTEND }}
+  #         IMAGE_TAG: ${{ steps.branch-name.outputs.current_branch }}-${{ github.run_number }}
+  #         REGION: ${{ secrets.AWS_REGION }}
+  #       with:
+  #         host: ${{ secrets.HOST }}
+  #         username: ${{ secrets.USERNAME }}
+  #         key: ${{ secrets.ACCESS_KEY }}
+  #         port: ${{ secrets.PORT }}
+  #         envs: REGISTRY, REPOSITORY, IMAGE_TAG, REGION
+  #         script: |
+  #           # Login to registry
+  #           aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $REGISTRY
+  #           # Stop running container
+  #           docker container stop $REPOSITORY || true
+  #           # Remove running container
+  #           docker container rm $REPOSITORY || true
+  #           # Remove Images
+  #           docker image rm $(docker image ls $REGISTRY/$REPOSITORY --all --quiet) || true
+  #           #Enter Project directory
+  #           cd ../home/swadhin/apps-new/theshop
+  #           # Run a new container from a new image
+  #           REGISTRY=$(echo $REGISTRY) IMAGE_TAG=$(echo $IMAGE_TAG) REPOSITORY=$(echo $REPOSITORY) docker-compose up -d
