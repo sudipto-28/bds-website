@@ -37,7 +37,7 @@ jobs:
           REPOSITORY: ${{ secrets.ECR_REPOSITORY_FRONTEND }}
           IMAGE_TAG: ${{ steps.branch-name.outputs.current_branch }}-${{ github.run_number }}
         run: |
-          REGISTRY=$(echo $REGISTRY) IMAGE_TAG=$(echo $IMAGE_TAG) REPOSITORY=$(echo $REPOSITORY) docker-compose -f docker-compose.yml build
+          REGISTRY=$(echo $REGISTRY) IMAGE_TAG=$(echo $IMAGE_TAG) REPOSITORY=$(echo $REPOSITORY) docker-compose -f docker-compose.prod.yml build
           aws ecr batch-delete-image \
           --repository-name $REPOSITORY \
           --image-ids "$(aws ecr list-images --repository-name $REPOSITORY --query 'imageIds[*]' --output json
