@@ -5,8 +5,6 @@ services:
     container_name: ${REPOSITORY}
     build:
       context: .
-      args:
-        NODE_ENV: production
     image: ${REGISTRY}/${REPOSITORY}:${IMAGE_TAG}
     restart: always
     ports:

@@ -5,7 +5,6 @@ ENV NODE_VERSION 16.13.1
 RUN mkdir /app
 WORKDIR /app
 
-ARG NODE_ENV
 
 COPY package*.json ./
 
@@ -13,7 +12,7 @@ RUN npm install
 
 COPY . .
 
-RUN NODE_ENV=production npm run build
+RUN npm run build
 
 EXPOSE 3000
 
