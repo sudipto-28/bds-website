@@ -63,7 +63,10 @@ export default {
     mainMenu: [
       {name: 'About', link: '/about', icon: ''},
       {name: 'Contact', link: '/contact', icon: ''},
-      {name: 'Product Items', link: '/shop', icon: ''},
+      {name: 'Fish', link: '/fish', icon: ''},
+      {name: 'Vegetables', link: '/vegetables', icon: ''},
+      {name: 'Fruits', link: '/fruits', icon: ''},
+      {name: 'Spices', link: '/spices', icon: ''},
       // {name: 'Blog', link: '/blog', icon: ''},
     ]
   }),

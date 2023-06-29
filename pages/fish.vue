@@ -3,7 +3,7 @@
     <main class="pb-24">
       <div class="px-4 py-16 text-center sm:px-6 lg:px-8">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900">
-          Product Items
+          Fishes
         </h1>
         <p class="mx-auto mt-4 max-w-xl text-base text-gray-500">
           The product item is a versatile, innovative, and sleek device designed
