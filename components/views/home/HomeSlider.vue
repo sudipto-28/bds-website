@@ -32,12 +32,12 @@ export default {
       {
         name: 'Fishes',
         des: 'We import export best quality Fishes which is good for health',
-        img: '/images/fishes.jpg'
+        img: '/images/products/WhatsApp Image 2023-06-24 at 1.30.16 PM.jpeg'
       },
       {
         name: 'Vegetables',
         des: 'We import export best quality vegetables which is good for health',
-        img: '/images/vegetable.jpeg'
+        img: '/images/products/WhatsApp Image 2023-06-25 at 1.00.49 PM.jpeg'
       },
       {
         name: 'Fruits',
@@ -47,17 +47,17 @@ export default {
       {
         name: 'Spices',
         des: 'We import export best quality Spices',
-        img: '/images/spices.jpeg'
+        img: '/images/products/WhatsApp Image 2023-06-25 at 5.54.28 PM.jpeg'
       },
       {
         name: 'Jute Sack',
         des: 'We import export best quality jute sack',
-        img: '/images/Jute-Sack.jpeg'
+        img: '/images/products/WhatsApp Image 2023-06-25 at 5.59.52 PM.jpeg'
       },
       {
-        name: 'Jute Rope',
-        des: 'We import export best quality jute rope',
-        img: '/images/rope.jpg'
+        name: 'Rocks',
+        des: 'We import export best quality rocks',
+        img: 'static/images/products/WhatsApp Image 2023-06-25 at 6.00.18 PM.jpeg'
       },
     ]
   })

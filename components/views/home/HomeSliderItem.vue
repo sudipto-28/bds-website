@@ -7,7 +7,8 @@
           <img class="h-full w-full object-cover object-top" :src="ctx.img" alt="People working on laptops">
           <div class="absolute inset-0 bg-green-200 mix-blend-multiply"></div>
         </div>
-        <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+        <div class="relative px-4 py-16
+         sm:px-6 sm:py-24 lg:py-32 lg:px-8">
           <h1 class="text-center text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-6xl">
             <span class="block text-indigo-500" :style="{textShadow: '0 2px 10px rgba(0,0,0,0.30)'}">{{ ctx.name }}</span>
           </h1>
