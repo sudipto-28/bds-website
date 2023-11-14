@@ -71,12 +71,12 @@ jobs:
           script: |
             # Login to registry
             aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $REGISTRY
-            # Stop running container
-            docker container stop $REPOSITORY || true
-            # Remove running container
-            docker container rm $REPOSITORY || true
-            # Remove Images
-            docker image rm $(docker image ls $REGISTRY/$REPOSITORY --all --quiet) || true
+            # # Stop running container
+            # docker container stop $REPOSITORY || true
+            # # Remove running container
+            # docker container rm $REPOSITORY || true
+            # # Remove Images
+            # docker image rm $(docker image ls $REGISTRY/$REPOSITORY --all --quiet) || true
             #Enter Project directory
             cd bds-website
             # Run a new container from a new image
