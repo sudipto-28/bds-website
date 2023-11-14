@@ -12,6 +12,7 @@
         </p>
       </div>
 
+
       <!-- Product grid -->
       <section
         aria-labelledby="products-heading"
@@ -23,6 +24,7 @@
         >
           <ProductCard v-for="(item,i) in products" :key="i" :product="item" />
           <!-- More products... -->
+          
         </div>
       </section>
     </main>
